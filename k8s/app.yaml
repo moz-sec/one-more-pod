@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: one-more-pod
-          image: ghcr.io/moz-sec/one-more-pod:v0.1.0
+          image: ghcr.io/moz-sec/one-more-pod:v0.1.0@sha256:4b4232e13e1a007767cc52011dfa14f7a79eb61b21ab3ceff82bf8348e5b97ac
           env:
             - name: DATABASE_URL
               valueFrom:
