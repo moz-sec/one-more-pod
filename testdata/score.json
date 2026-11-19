@@ -1,0 +1,99 @@
+[
+  {
+    "name": "balanced-start",
+    "seed": 1864097727,
+    "actions": [
+      {
+        "type": "place",
+        "podId": "pod-1",
+        "nodeId": "node-a"
+      },
+      {
+        "type": "place",
+        "podId": "pod-2",
+        "nodeId": "node-b"
+      },
+      {
+        "type": "place",
+        "podId": "pod-3",
+        "nodeId": "node-b"
+      },
+      {
+        "type": "place",
+        "podId": "pod-4",
+        "nodeId": "node-c"
+      }
+    ],
+    "score": 6700,
+    "running": 4
+  },
+  {
+    "name": "evict-coredns",
+    "seed": 1864097727,
+    "actions": [
+      {
+        "type": "place",
+        "podId": "pod-1",
+        "nodeId": "node-a"
+      },
+      {
+        "type": "place",
+        "podId": "pod-2",
+        "nodeId": "node-b"
+      },
+      {
+        "type": "place",
+        "podId": "pod-3",
+        "nodeId": "node-b"
+      },
+      {
+        "type": "place",
+        "podId": "pod-4",
+        "nodeId": "node-c"
+      },
+      {
+        "type": "evict",
+        "podId": "pod-3"
+      }
+    ],
+    "score": 4600,
+    "running": 3
+  },
+  {
+    "name": "swap-coredns",
+    "seed": 1864097727,
+    "actions": [
+      {
+        "type": "place",
+        "podId": "pod-1",
+        "nodeId": "node-a"
+      },
+      {
+        "type": "place",
+        "podId": "pod-2",
+        "nodeId": "node-b"
+      },
+      {
+        "type": "place",
+        "podId": "pod-3",
+        "nodeId": "node-b"
+      },
+      {
+        "type": "place",
+        "podId": "pod-4",
+        "nodeId": "node-c"
+      },
+      {
+        "type": "evict",
+        "podId": "pod-3"
+      },
+      {
+        "type": "place",
+        "podId": "pod-5",
+        "nodeId": "node-b"
+      }
+    ],
+    "score": 6800,
+    "running": 4
+  }
+]
