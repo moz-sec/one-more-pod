@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: one-more-pod
-          image: one-more-pod:latest # 公開レジストリに push したイメージへ変更
+          image: ghcr.io/moz-sec/one-more-pod:v0.1.0
           env:
             - name: DATABASE_URL
               valueFrom:

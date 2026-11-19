@@ -95,7 +95,7 @@ docker run --rm -p 8080:8080 -e DATABASE_URL='<コンテナから接続可能な
 
 ### OSS Showcase
 
-[k8s/app.yaml](k8s/app.yaml) は `apps/one-more-pod/app.yaml` として OSS Showcase に配置する例です。Gateway は `gateway/showcase`、ホスト名は `one-more-pod.showcase.cloudnativedays.jp` を指定しています。同じ namespace 内に 1 インスタンス・1Gi の CloudNativePG Cluster を作成し、生成される `one-more-pod-db-app` Secret の `uri` をアプリへ渡します。掲載用リポジトリにコピーし、`image: one-more-pod:latest` を認証なしで pull できる実際の公開イメージに変更してから、Showcase の `python3 scripts/check.py` で確認してください。現在のイメージ指定はプレースホルダーで、そのままではクラスタから pull できることを保証しません。
+[k8s/app.yaml](k8s/app.yaml) は `apps/one-more-pod/app.yaml` として OSS Showcase に配置する例です。Gateway は `gateway/showcase`、ホスト名は `one-more-pod.showcase.cloudnativedays.jp` を指定しています。同じ namespace 内に 1 インスタンス・1Gi の CloudNativePG Cluster を作成し、生成される `one-more-pod-db-app` Secret の `uri` をアプリへ渡します。リリースタグ（例 `v0.1.0`）の push で GitHub Actions が Linux/amd64 イメージを GHCR に送信します。初回はパッケージの公開範囲を Public に設定し、未ログインで pull できることを確認してください。掲載用リポジトリにマニフェストをコピーして `python3 scripts/check.py` を実行します。
 
 旧名でデプロイ済みの場合、新しい Cluster は別のストレージを使用します。ランキングを引き継ぐ場合は、切り替え前に既存 DB からバックアップし、新しい DB に復元してください。
 
